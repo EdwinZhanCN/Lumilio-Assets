@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "name": "e2e",
+  "description": "Small deterministic set for isolated end-to-end tests.",
+  "assets": [
+    "landing-01-lake-cabin",
+    "landing-07-portrait-a",
+    "landing-24-cafe-poster",
+    "picsum-upload-123",
+    "picsum-upload-124",
+    "picsum-scan-000",
+    "picsum-scan-001"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "name": "smoke",
+  "description": "Minimum media set for the upload and repository-scan smoke paths.",
+  "assets": [
+    "landing-01-lake-cabin",
+    "picsum-upload-123",
+    "picsum-scan-000"
+  ]
+}
