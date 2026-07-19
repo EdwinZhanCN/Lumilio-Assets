@@ -17,6 +17,7 @@ async function readJson(relativePath) {
 async function listFiles(directory, prefix = "") {
   const files = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
+    if (entry.name === ".DS_Store") continue;
     const relative = path.posix.join(prefix, entry.name);
     if (entry.isDirectory()) {
       files.push(...(await listFiles(path.join(directory, entry.name), relative)));
@@ -82,4 +83,3 @@ for (const id of profiles.get("e2e")) {
 if (profiles.get("demo").size !== ids.size) fail("demo profile must include the complete catalog");
 
 console.log(`Verified ${ids.size} assets and ${profileNames.length} profiles.`);
-
