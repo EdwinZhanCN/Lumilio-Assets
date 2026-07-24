@@ -4925,6 +4925,75 @@
         "name": "Unsplash License",
         "url": "https://unsplash.com/license"
       }
+    },
+    {
+      "id": "commons-video-ocean-waves",
+      "path": "media/upload/videos/ocean-waves-iceland.mp4",
+      "sha256": "3f0bfa4debfe6bfb18fee30542bfdcf92e712de69c963334573478679accc5ce",
+      "bytes": 182565,
+      "mime": "video/mp4",
+      "expected": {
+        "width": 1280,
+        "height": 720,
+        "duration": 3.52,
+        "ingestMethod": "upload"
+      },
+      "source": {
+        "provider": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Ocean_waves_at_L%C3%A6kjavik_beach,_Iceland.webm",
+        "author": "Alexander Grebenkov",
+        "note": "Transcoded to H.264 MP4 (720p max), audio removed; ocean clip trimmed to 3.5s"
+      },
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      }
+    },
+    {
+      "id": "commons-video-chameleon-flowers",
+      "path": "media/upload/videos/chameleon-ixora-flowers.mp4",
+      "sha256": "722d3510053500006dc7ccfbf14cde9eaa7f8830daa5d7e3ce03cca08665dd08",
+      "bytes": 536578,
+      "mime": "video/mp4",
+      "expected": {
+        "width": 1280,
+        "height": 720,
+        "duration": 6.62,
+        "ingestMethod": "upload"
+      },
+      "source": {
+        "provider": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Chameleon_on_ixora_flowers_(2).webm",
+        "author": "Ventrovert",
+        "note": "Transcoded to H.264 MP4 (720p max), audio removed; ocean clip trimmed to 3.5s"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    },
+    {
+      "id": "commons-video-mountain-landscape",
+      "path": "media/upload/videos/mountain-landscape-himachal.mp4",
+      "sha256": "aaa948023e24f68eb49d349b74c53d843a92207dd00dc33df97d888d11ff9c16",
+      "bytes": 1683018,
+      "mime": "video/mp4",
+      "expected": {
+        "width": 478,
+        "height": 850,
+        "duration": 14.61,
+        "ingestMethod": "upload"
+      },
+      "source": {
+        "provider": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Natural_landscape_(Himachal_Pradesh).webm",
+        "author": "Rajani Gairshail",
+        "note": "Transcoded to H.264 MP4 (720p max), audio removed; ocean clip trimmed to 3.5s"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
     }
   ]
 }
