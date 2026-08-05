@@ -12,8 +12,9 @@ IDs without copying files.
 - `profiles/e2e.json` is the deterministic test set and contains smoke.
 - `profiles/demo.json` is the complete pool and contains e2e.
 - Existing bytes and IDs are immutable. A content change is a new asset ID.
-- Media files are Git LFS objects. This repository is consumed by pinned Git
-  revision, never as a submodule.
+- Media files are Git LFS objects. Consumers pin an immutable release tag and
+  commit revision; this repository is never embedded as a submodule.
+- Git refs are the release authority, while each consumer records its own lock.
 
 ## Clone and verify
 
@@ -27,6 +28,7 @@ node scripts/verify.mjs
 
 The verifier checks catalog/profile structure, subset relationships, file sizes,
 SHA-256 values, missing or uncatalogued media, and required provenance fields.
+The same command and `git lfs fsck` run in the repository's CI workflow.
 
 ## Add an asset
 
@@ -47,10 +49,9 @@ consumer integration section below.
 
 ### Consumer integration
 
-Lumilio Photos should store the selected repository revision, profile name, and
-catalog hash in `assets.lock.json`. Its asset sync task fetches that exact
-revision and only the LFS objects referenced by the selected profile, then
-rechecks the catalog and media hashes. That lock and sync task belong to the
-next ADR-005 implementation stage; this repository intentionally does not
-modify the Photos application.
+Lumilio Photos owns `assets.lock.json`, which records the selected immutable
+tag, revision, profile, and catalog SHA-256. Its explicit reconcile command
+fetches that exact revision and only the LFS objects referenced by the selected
+profile, then rechecks the catalog and media hashes. Normal Photos checks use
+only committed lock state and do not contact this repository.
 
